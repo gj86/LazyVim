@@ -131,8 +131,8 @@ map("n", "<leader>uT", function() if vim.b.ts_highlight then vim.treesitter.stop
 map("n", "<leader>ub", function() LazyVim.toggle("background", false, {"light", "dark"}) end, { desc = "Toggle Background" })
 
 -- lazygit
-map("n", "<leader>gg", function() LazyVim.lazygit( { cwd = LazyVim.root.git() }) end, { desc = "Lazygit (Root Dir)" })
-map("n", "<leader>gG", function() LazyVim.lazygit() end, { desc = "Lazygit (cwd)" })
+map("n", "<leader>gg", function() LazyVim.lazygit( { cwd = LazyVim.root.git() }) vim.opt_local.spell = true end, { desc = "Lazygit (Root Dir)" })
+map("n", "<leader>gG", function() LazyVim.lazygit() vim.opt_local.spell = true end, { desc = "Lazygit (cwd)" })
 map("n", "<leader>gb", LazyVim.lazygit.blame_line, { desc = "Git Blame Line" })
 map("n", "<leader>gB", LazyVim.lazygit.browse, { desc = "Git Browse" })
 
